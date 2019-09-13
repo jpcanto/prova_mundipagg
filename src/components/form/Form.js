@@ -4,27 +4,21 @@ import { ChromePicker } from "react-color";
 export default class Form extends React.Component {
 
     state = {
-        displayColorPicker: false,
-        defaultColor: "#191919",
-        changeColor: "#191919",
-        color: {
-            r: "0",
-            g: "9",
-            b: "153",
-            a: "1"
-        }
+        visualizaColorPicker: false,
+        mudaCor: "#191919",
+        color: {}
     };
 
-    onHandleShowColorPicker = () => {
-        this.setState({ displayColorPicker: true });
+    mostraColorPicker = () => {
+        this.setState({ visualizaColorPicker: true });
     };
 
-    onHandleCloseColorPicker = () => {
-        this.setState({ displayColorPicker: false });
+    escondeColorPicker = () => {
+        this.setState({ visualizaColorPicker: false });
     };
 
-    onChangeColorPicker = color => {
-        this.setState({ color: color.rgb, changeColor: color.hex });
+    mudaColorPicker = color => {
+        this.setState({ color: color.rgb, mudaCor: color.hex });
     };
 
     render() {
@@ -41,16 +35,16 @@ export default class Form extends React.Component {
                 <h2>ICON'S BACKGROUND COLOR</h2>
                 <div className="formulario__cor">
                     <p>Pick a color</p>
-                    <button className="formulario__cor__select-color" style={{background: this.state.changeColor}} onClick={() => this.onHandleShowColorPicker()}>{this.state.changeColor}</button>
-                    {this.state.displayColorPicker && (
+                    <button className="formulario__cor__select-color" style={{background: this.state.mudaCor}} onClick={() => this.mostraColorPicker()}>{this.state.mudaCor}</button>
+                    {this.state.visualizaColorPicker && (
                         <div className={"formulario__cor-caixa"}>
                             <div
                                 className={"formulario__cor-caixa--fecha"}
-                                onClick={() => this.onHandleCloseColorPicker()}
+                                onClick={() => this.escondeColorPicker()}
                             />
                             <ChromePicker
                                 color={this.state.color}
-                                onChange={this.onChangeColorPicker}
+                                onChange={this.mudaColorPicker}
                             />
                         </div>
                     )}
