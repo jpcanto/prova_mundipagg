@@ -1,0 +1,40 @@
+@media screen and (min-width: 1024px) {
+
+    #root {
+        background-color: #eff9fb;
+        padding: 25% 0 !important;
+        .conteudo-principal {
+            background: #fff;
+            border: 1px solid #6d6d6d;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0 30px 30px;
+            .formulario {
+                width: 45%;
+                h1 {
+                    &::after {
+                        right: 55px;
+                        top: 40px;
+                    }
+                }
+            }
+            .preview {
+                margin-top: 92px;
+                width: 30%;
+                &__corpo {
+                    flex-direction: column;
+                    &--caixa {
+                        width: -webkit-fill-available;
+                    }
+                    &--descricao {
+                        width: -webkit-fill-available;
+                        h2, p {
+                            margin-left: 0 !important;
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+}

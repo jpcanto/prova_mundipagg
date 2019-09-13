@@ -1,3 +1,44 @@
+.conteudo-principal {
+  display: flex;
+  flex-direction: column;
+}
+
+@media screen and (min-width: 1024px) {
+  #root {
+    background-color: #eff9fb;
+    padding: 25% 0 !important;
+  }
+  #root .conteudo-principal {
+    background: #fff;
+    border: 1px solid #6d6d6d;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 30px 30px;
+  }
+  #root .conteudo-principal .formulario {
+    width: 45%;
+  }
+  #root .conteudo-principal .formulario h1::after {
+    right: 55px;
+    top: 40px;
+  }
+  #root .conteudo-principal .preview {
+    margin-top: 92px;
+    width: 30%;
+  }
+  #root .conteudo-principal .preview__corpo {
+    flex-direction: column;
+  }
+  #root .conteudo-principal .preview__corpo--caixa {
+    width: -webkit-fill-available;
+  }
+  #root .conteudo-principal .preview__corpo--descricao {
+    width: -webkit-fill-available;
+  }
+  #root .conteudo-principal .preview__corpo--descricao h2, #root .conteudo-principal .preview__corpo--descricao p {
+    margin-left: 0 !important;
+  }
+}
 .formulario {
   height: 100%;
   margin: 15px;
@@ -94,7 +135,7 @@
   margin-bottom: 20px;
 }
 .preview__corpo--caixa {
-  align-items: center;
+  align-self: baseline;
   background: #191919;
   display: flex;
   height: 100%;
