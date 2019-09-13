@@ -1,0 +1,53 @@
+.formulario {
+    margin: 15px;
+    h1 {
+        @include titulos(1.5em);
+        margin-bottom: 3vh;
+        &::after {
+            content: "X";
+            position: absolute;
+            right: 20px;
+            font-weight: bolder;
+        }
+    }
+    h2 {
+        @include titulos(1.1em);
+    }
+
+    ::placeholder {
+        color: $corSecundaria;
+    }
+    input, p {
+        @include descricoes;
+    } 
+    input {
+        border: 0;
+        height: 50px;
+        margin-left: 0;
+        padding: 15px;
+    }
+
+    &__icone {
+        display: flex;
+        &__select-file {
+            @include botoes(#bbb, 80%);
+        }
+    }
+
+    &__cor {
+        display: flex;
+        &__select-color {
+            @include botoes(#2d2d2d, 45%);
+        }
+    }
+
+    select {
+        color: $corSecundaria;
+
+        border: 0;
+        height: 50px;
+        padding: 15px;
+        width: -webkit-fill-available;
+    }
+
+}

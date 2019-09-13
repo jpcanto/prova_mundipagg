@@ -1,0 +1,25 @@
+@mixin titulos ($fontSize) {
+    color: $corPrimaria;
+    font-family: sans-serif;
+    font-size: $fontSize;
+}
+
+@mixin descricoes {
+    color: $corSecundaria;
+    font-family: sans-serif;
+    font-size: 1em;
+
+    margin-left: 5vw;
+    width: -webkit-fill-available;
+}
+
+@mixin botoes ($corFundo, $largura) {
+    color: #fff;
+    font-family: sans-serif;
+
+    background: $corFundo;
+    border: 0;
+    border-radius: 3px;
+    cursor: pointer;
+    width: $largura;
+}

@@ -8,12 +8,12 @@ const Form = () => (
         <h2>APP ICON</h2>
         <div className="formulario__icone">
             <p>Select a File</p>
-            <button className="formulario__select-file">SELECT A FILE</button>
+            <button className="formulario__icone__select-file">SELECT A FILE</button>
         </div>
         <h2>ICON'S BACKGROUND COLOR</h2>
         <div className="formulario__cor">
             <p>Pick a color</p>
-            <button className="formulario__select-color">#191919</button>
+            <button className="formulario__cor__select-color">#191919</button>
         </div>
         <h2>CATEGORY</h2>
         <div className="formulario__categoria">
