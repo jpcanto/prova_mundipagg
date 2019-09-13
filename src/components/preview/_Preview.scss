@@ -1,0 +1,45 @@
+.preview {
+    height: 100%;
+    margin: 15px;
+    h2 {
+        @include titulos(1.1em);
+    }
+    
+    &__corpo {
+        align-items: center;
+        display: flex;
+        margin-bottom: 20px;
+        &--caixa {
+            align-items: center;
+            background: #191919;
+            display: flex;
+            height: 100%;
+            justify-content: center;
+            margin-right: 15px;
+            padding: 35px 0;
+            width: 150px;
+            &__img {
+                display: block;
+                height: 50px;
+                width: 50px;
+            }
+        }
+        & h2 {
+            margin-left: 5vw;
+        }
+        &--descricao {
+            p:not(.small) {
+                @include descricoes;
+            }
+            p.small {
+                @include titulos(.9em);
+                margin-left: 5vw;
+            }
+        }
+    }
+
+    button {
+        @include botoes(#bbb, 100%);
+        height: 50px;
+    }
+}
