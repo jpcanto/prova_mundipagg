@@ -23,7 +23,7 @@ export default class Form extends React.Component {
 
     render() {
         return (
-            <section className="formulario">
+            <div className="formulario">
                 <h1>Create Your App</h1>
                 <h2>APP NAME</h2>
                 <input type="text" placeholder="Enter App Display Name"></input>
@@ -57,7 +57,7 @@ export default class Form extends React.Component {
                         <option>Categoria 2</option>
                     </select>
                 </div>
-            </section>
+            </div>
         )
     }
 }
