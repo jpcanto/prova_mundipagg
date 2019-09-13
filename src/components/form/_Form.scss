@@ -39,6 +39,17 @@
         &__select-color {
             @include botoes(#2d2d2d, 45%);
         }
+        &-caixa {
+            bottom: 0;
+            position: absolute;
+        }
+        &-caixa--fecha {
+            position: fixed;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+        }
     }
 
     select {
