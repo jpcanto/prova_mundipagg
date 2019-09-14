@@ -1,8 +1,5 @@
 @media screen and (min-width: 768px) {
     .formulario {
-        h1::after {
-            right: -70%;
-        }
         &__icone {
             &__select-file {
                 width: 45%;
@@ -36,11 +33,6 @@
             margin: 0 30px 30px;
             .formulario {
                 width: 45%;
-                h1 {
-                    &::after {
-                        right: -155%;
-                    }
-                }
             }
             .preview {
                 border-left: 1px solid #cccccc94;

@@ -15,8 +15,8 @@
 }
 .formulario h1::after {
   content: "X";
-  position: relative;
-  right: -28%;
+  position: absolute;
+  right: 10px;
   font-weight: bolder;
 }
 .formulario h2 {
@@ -65,7 +65,6 @@
   width: 45%;
 }
 .formulario__cor-caixa {
-  bottom: 0;
   position: absolute;
 }
 .formulario__cor-caixa--fecha {
@@ -136,9 +135,6 @@
 }
 
 @media screen and (min-width: 768px) {
-  .formulario h1::after {
-    right: -70%;
-  }
   .formulario__icone__select-file {
     width: 45%;
   }
@@ -164,9 +160,6 @@
   }
   #root .conteudo-principal .formulario {
     width: 45%;
-  }
-  #root .conteudo-principal .formulario h1::after {
-    right: -155%;
   }
   #root .conteudo-principal .preview {
     border-left: 1px solid #cccccc94;

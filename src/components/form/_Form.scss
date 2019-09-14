@@ -6,8 +6,8 @@
         margin-bottom: 3vh;
         &::after {
             content: "X";
-            position: relative;
-            right: -28%;
+            position: absolute;
+            right: 10px;
             font-weight: bolder;
         }
     }
