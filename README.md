@@ -2,6 +2,9 @@
 
 ## Scripts:
 
+### `npm install || yarn add`
+- Instala todas as dependencias do projeto (necessário para rodar o projeto localmente).
+
 ### `npm/yarn start`
 - Inicia o projeto localmente (localhost:3000).
 - OBS: Inicia juntamente a task sass, onde qualquer alteração sass, gera um novo main.css
