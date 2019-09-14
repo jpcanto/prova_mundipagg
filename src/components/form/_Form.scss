@@ -6,8 +6,8 @@
         margin-bottom: 3vh;
         &::after {
             content: "X";
-            position: absolute;
-            right: 20px;
+            position: relative;
+            right: -28%;
             font-weight: bolder;
         }
     }
@@ -41,7 +41,6 @@
             @include botoes(#2d2d2d, 45%);
         }
         &-caixa {
-            bottom: 0;
             position: absolute;
         }
         &-caixa--fecha {

@@ -1,8 +1,33 @@
+@media screen and (min-width: 768px) {
+    .formulario {
+        h1::after {
+            right: -70%;
+        }
+        &__icone {
+            &__select-file {
+                width: 45%;
+            }
+        }
+        &__cor {
+            &__select-color {
+                width: 25%;
+            }
+        }
+    }
+    .preview {
+        &__corpo {
+            &--caixa {
+                width: 200px
+            }
+        }
+    }
+}
+
 @media screen and (min-width: 1024px) {
 
     #root {
         background-color: #eff9fb;
-        padding: 25% 0 !important;
+        padding: 10vh 0 !important;
         .conteudo-principal {
             background: #fff;
             border: 1px solid #6d6d6d;
@@ -13,13 +38,14 @@
                 width: 45%;
                 h1 {
                     &::after {
-                        right: 55px;
-                        top: 265px;
+                        right: -155%;
                     }
                 }
             }
             .preview {
-                margin-top: 92px;
+                border-left: 1px solid #cccccc94;
+                margin-top: 62px;
+                padding: 30px 50px;
                 width: 30%;
                 &__corpo {
                     flex-direction: column;
@@ -32,6 +58,10 @@
                             margin-left: 0 !important;
                         }
                     }
+                }
+                button {
+                    width: 50%;
+                    margin-left: 25%;
                 }
             }
         }
