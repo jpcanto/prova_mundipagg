@@ -37,6 +37,12 @@ export default class Form extends React.Component {
 
     mudaColorPicker = color => {
         this.setState({ color: color.rgb, mudaCor: color.hex });
+        if (this.state.color.a < 1) {
+            this.setState({
+                mudaCor: `rgba(${this.state.color.r}, ${this.state.color.g}, ${this.state.color.b}, ${this.state.color.a})`
+            })
+        }
+        console.log(this.state.color, this.state.mudaCor)
     };
 
     salvaAppInfo = () => {
