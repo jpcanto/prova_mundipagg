@@ -46,7 +46,9 @@ export default class Form extends React.Component {
     };
 
     salvaAppInfo = () => {
-        if (!this.state.files) {
+        if (this.state.appName === 'App Name') {
+            alert('É necessário escolher algum nome');
+        } else if (!this.state.files) {
             alert('É necessário escolher alguma imagem');
         } else if (this.state.mudaCor === '#191919') {
             alert('É necessário escolher alguma cor');
@@ -63,16 +65,18 @@ export default class Form extends React.Component {
 
     render() {
         return (
-            <form className="conteudo-principal">
+            <section className="conteudo-principal">
+
                 <div className="formulario">
+
                     <h1>Create Your App</h1>
                     <h2>APP NAME</h2>
                     <input
                         type="text"
                         onChange={(e) => this.setState({ appName: e.target.value })}
-                        required
                         placeholder="Enter App Display Name">
                     </input>
+
                     <h2>APP ICON</h2>
                     <div className="formulario__icone">
                         <p>Select a File</p>
@@ -89,6 +93,7 @@ export default class Form extends React.Component {
                             </div>
                         </Files>
                     </div>
+
                     <h2>ICON'S BACKGROUND COLOR</h2>
                     <div className="formulario__cor">
                         <p>Pick a color</p>
@@ -106,6 +111,7 @@ export default class Form extends React.Component {
                             </div>
                         )}
                     </div>
+
                     <h2>CATEGORY</h2>
                     <div className="formulario__categoria">
                         <select onChange={(e) => this.setState({ appCategory: e.target.value })}>
@@ -116,7 +122,9 @@ export default class Form extends React.Component {
                             <option>Esportes</option>
                         </select>
                     </div>
+
                 </div>
+
                 <div className="preview">
                     <h2>APP'S CARD PREVIEW</h2>
                     <div className="preview__corpo">
@@ -139,7 +147,7 @@ export default class Form extends React.Component {
                     </div>
                     <button onClick={this.salvaAppInfo}>SAVE APP</button>
                 </div>
-            </form>
+            </section>
         )
     }
 }
