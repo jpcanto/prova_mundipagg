@@ -16,7 +16,7 @@
 .formulario h1::after {
   content: "X";
   position: absolute;
-  right: 10px;
+  right: 50px;
   font-weight: bolder;
 }
 .formulario h2 {
@@ -40,6 +40,14 @@
   margin-left: 0;
   padding: 15px;
 }
+.formulario .files-box {
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
+  position: absolute;
+  right: 15px;
+  width: 50%;
+}
 .formulario__icone {
   display: flex;
 }
@@ -50,7 +58,8 @@
   border: 0;
   border-radius: 3px;
   cursor: pointer;
-  width: 80%;
+  width: -webkit-fill-available;
+  height: 50px;
 }
 .formulario__cor {
   display: flex;
@@ -107,6 +116,14 @@
   margin-right: 15px;
   width: 150px;
 }
+.preview__corpo--caixa .files-gallery {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+}
+.preview__corpo--caixa .files-gallery-item {
+  width: 50%;
+}
 .preview__corpo h2 {
   margin-left: 5vw;
 }
@@ -160,6 +177,10 @@
   }
   #root .conteudo-principal .formulario {
     width: 45%;
+  }
+  #root .conteudo-principal .formulario .files-box {
+    left: -12px;
+    right: 0;
   }
   #root .conteudo-principal .preview {
     border-left: 1px solid #cccccc94;

@@ -28,10 +28,19 @@
         padding: 15px;
     }
 
+    .files-box {
+        display: flex;
+        height: 50px;
+        justify-content: flex-end;
+        position: absolute;
+        right: 15px;
+        width: 50%;
+    }
     &__icone {
         display: flex;
         &__select-file {
-            @include botoes(#bbb, 80%);
+            @include botoes(#bbb, -webkit-fill-available);
+            height: 50px;
         }
     }
 
@@ -62,4 +71,53 @@
         width: -webkit-fill-available;
     }
 
+}
+
+.preview {
+    height: 100%;
+    margin: 15px;
+    h2 {
+        @include titulos(1.1em);
+    }
+    
+    &__corpo {
+        align-items: center;
+        display: flex;
+        margin-bottom: 20px;
+        &--caixa {
+            align-items: center;
+            align-self: baseline;
+            background: #191919;
+            display: flex;
+            height: 200px;
+            justify-content: center;
+            margin-right: 15px;
+            width: 150px;
+            .files-gallery {
+                display: flex;
+                justify-content: center;
+                height: 50%;
+                &-item {
+                    width: 50%;
+                }
+            }
+        }
+        & h2 {
+            margin-left: 5vw;
+        }
+        &--descricao {
+            p:not(.small) {
+                @include descricoes;
+            }
+            p.small {
+                @include titulos(.9em);
+                margin-left: 5vw;
+            }
+        }
+    }
+
+    button {
+        @include botoes(#bbb, 100%);
+        height: 50px;
+    }
 }
