@@ -12,6 +12,7 @@ export default class Form extends React.Component {
         mudaCor: '#191919',
         color: {},
         files: [],
+        appInfo: {},
     }
 
     onFilesChange = (files) => {
@@ -43,6 +44,24 @@ export default class Form extends React.Component {
     mudaColorPicker = color => {
         this.setState({ color: color.rgb, mudaCor: color.hex });
     };
+
+    salvaAppInfo = () => {
+        if (this.state.appName === 'App Name') {
+            alert('Campo nome do app deve ser preenchido');
+        } else if (this.state.files === []) {
+            alert('É necessário escolher alguma imagem');
+        } else if (this.state.mudaCor === '#191919') {
+            alert('É necessário escolher alguma cor');
+        } else if (!this.state.appCategory === 'App Category') {
+            alert('É necessário escolher alguma categoria');
+        } else {
+            alert(`Dados enviados com sucesso!!`)
+            console.log(`Nome: ${this.state.appName}`)
+            console.log(`Imagem url: ${this.state.files}`)
+            console.log(`Cor hex: ${this.state.mudaCor}`)
+            console.log(`Categoria: ${this.state.appCategory}`)
+        }
+    }
 
     render() {
         return (
@@ -119,7 +138,7 @@ export default class Form extends React.Component {
                             <p className="small">New App</p>
                         </div>
                     </div>
-                    <button>SAVE APP</button>
+                    <button onClick={this.salvaAppInfo}>SAVE APP</button>
                 </div>
             </section>
         )
