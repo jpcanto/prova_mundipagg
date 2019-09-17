@@ -1,5 +1,4 @@
 import React from 'react'
-import { bindActionCreators } from 'redux'
 import { ChromePicker } from "react-color"
 import Files from 'react-files'
 
@@ -133,7 +132,7 @@ export default class Form extends React.Component {
                                 this.state.files.length > 0 ?
                                     <div className='files-gallery'>
                                         {this.state.files.map((file) =>
-                                            <img className='files-gallery-item' src={file.preview.url} key={file.id} />
+                                            <img className='files-gallery-item' src={file.preview.url} key={file.id} alt='selected-file' />
                                         )}
                                     </div>
                                     : null
