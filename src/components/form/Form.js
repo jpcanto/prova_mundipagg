@@ -42,7 +42,6 @@ export default class Form extends React.Component {
                 mudaCor: `rgba(${this.state.color.r}, ${this.state.color.g}, ${this.state.color.b}, ${this.state.color.a})`
             })
         }
-        console.log(this.state.color, this.state.mudaCor)
     };
 
     salvaAppInfo = () => {
