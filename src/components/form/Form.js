@@ -11,7 +11,6 @@ export default class Form extends React.Component {
         mudaCor: '#191919',
         color: {},
         files: [],
-        appInfo: {},
     }
 
     onFilesChange = (files) => {
@@ -25,11 +24,7 @@ export default class Form extends React.Component {
     }
 
     onFilesError = (error, file) => {
-        console.log('error code ' + error.code + ': ' + error.message)
-    }
-
-    filesRemoveAll = () => {
-        this.refs.files.removeFiles()
+        console.log(`erro código: ${error.code} ${error.message}`)
     }
 
     mostraColorPicker = () => {
