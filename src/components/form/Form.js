@@ -92,8 +92,10 @@ export default class Form extends React.Component {
                     <div className="formulario__categoria">
                         <select onChange={(e) => this.setState({ appCategory: e.target.value })}>
                             <option>Select a Category</option>
-                            <option>Categoria 1</option>
-                            <option>Categoria 2</option>
+                            <option>Técnologia e informação</option>
+                            <option>Educação</option>
+                            <option>Hospitalar</option>
+                            <option>Esportes</option>
                         </select>
                     </div>
                 </div>
