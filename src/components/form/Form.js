@@ -46,9 +46,7 @@ export default class Form extends React.Component {
     };
 
     salvaAppInfo = () => {
-        if (this.state.appName === 'App Name') {
-            alert('Campo nome do app deve ser preenchido');
-        } else if (this.state.files === []) {
+        if (!this.state.files) {
             alert('É necessário escolher alguma imagem');
         } else if (this.state.mudaCor === '#191919') {
             alert('É necessário escolher alguma cor');
@@ -65,13 +63,14 @@ export default class Form extends React.Component {
 
     render() {
         return (
-            <section className="conteudo-principal">
+            <form className="conteudo-principal">
                 <div className="formulario">
                     <h1>Create Your App</h1>
                     <h2>APP NAME</h2>
                     <input
                         type="text"
                         onChange={(e) => this.setState({ appName: e.target.value })}
+                        required
                         placeholder="Enter App Display Name">
                     </input>
                     <h2>APP ICON</h2>
@@ -140,7 +139,7 @@ export default class Form extends React.Component {
                     </div>
                     <button onClick={this.salvaAppInfo}>SAVE APP</button>
                 </div>
-            </section>
+            </form>
         )
     }
 }
