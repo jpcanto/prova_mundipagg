@@ -84,7 +84,7 @@ export default class Form extends React.Component {
                             onChange={this.onFilesChange}
                             onError={this.onFilesError}
                             accepts={['image/*']}
-                            multiple
+                            multiple = {false}
                             clickable
                         > <div className="formulario__icone__select-box">
                                 <p>Select a File</p>
