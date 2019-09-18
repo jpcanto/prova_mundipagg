@@ -44,16 +44,23 @@ export default class Form extends React.Component {
         }
     };
 
-    salvaAppInfo = () => {
+    validateForms = () => {
         if (this.state.appName === 'App Name' || this.state.appName === '') {
             alert('É necessário escolher algum nome');
         } else if (this.state.files <= 0) {
             alert('É necessário escolher alguma imagem');
         } else if (this.state.mudaCor === '#191919') {
             alert('É necessário escolher alguma cor');
-        } else if (!this.state.appCategory === 'App Category') {
+        } else if (this.state.appCategory === 'App Category') {
             alert('É necessário escolher alguma categoria');
         } else {
+            this.setState({ isvalidate: true })
+        }
+    }
+
+    salvaAppInfo = () => {
+        this.validateForms();
+        if (this.state.isvalidate) {
             alert(`Dados enviados com sucesso!!`)
             console.log(`Nome: ${this.state.appName}`)
             console.log(`Imagem url: ${this.state.files}`)
@@ -69,6 +76,7 @@ export default class Form extends React.Component {
                 <div className="formulario">
 
                     <h1>Create Your App</h1>
+                    <button className="formulario__fecha">X</button>
                     <h2>APP NAME</h2>
                     <input
                         type="text"
@@ -84,7 +92,7 @@ export default class Form extends React.Component {
                             onChange={this.onFilesChange}
                             onError={this.onFilesError}
                             accepts={['image/*']}
-                            multiple = {false}
+                            multiple={false}
                             clickable
                         > <div className="formulario__icone__select-box">
                                 <p>Select a File</p>
