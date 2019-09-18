@@ -94,11 +94,13 @@
 }
 .formulario select {
   color: #cacaca;
-  background: #fff;
+  background: url(https://cdn1.iconfinder.com/data/icons/material-core/10/arrow-drop-down-512.png) no-repeat right;
+  background-size: 15px;
   border: 0;
   height: 50px;
   padding: 15px;
   width: -webkit-fill-available;
+  -webkit-appearance: none;
 }
 
 .preview {
