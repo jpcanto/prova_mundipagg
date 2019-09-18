@@ -45,7 +45,7 @@ export default class Form extends React.Component {
     };
 
     salvaAppInfo = () => {
-        if (this.state.appName === 'App Name') {
+        if (this.state.appName === 'App Name' || this.state.appName === '') {
             alert('É necessário escolher algum nome');
         } else if (!this.state.files) {
             alert('É necessário escolher alguma imagem');
