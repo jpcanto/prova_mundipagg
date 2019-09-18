@@ -78,17 +78,17 @@ export default class Form extends React.Component {
 
                     <h2>APP ICON</h2>
                     <div className="formulario__icone">
-                        <p>Select a File</p>
                         <Files
                             ref='files'
-                            className='files-dropzone-gallery'
+                            className='files-dropzone'
                             onChange={this.onFilesChange}
                             onError={this.onFilesError}
                             accepts={['image/*']}
                             multiple
                             clickable
-                        > <div className="files-box">
-                                <button className="formulario__icone__select-file">SELECT A FILE</button>
+                        > <div className="formulario__icone__select-box">
+                                <p>Select a File</p>
+                                <button className="formulario__icone__select-box__file">SELECT A FILE</button>
                             </div>
                         </Files>
                     </div>

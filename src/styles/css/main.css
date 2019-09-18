@@ -15,6 +15,7 @@
 }
 .formulario h1::after {
   content: "X";
+  cursor: pointer;
   position: absolute;
   right: 50px;
   font-weight: bolder;
@@ -31,7 +32,7 @@
   color: #cacaca;
   font-family: sans-serif;
   font-size: 1em;
-  margin-left: 5vw;
+  margin-left: 15px;
   width: -webkit-fill-available;
 }
 .formulario input {
@@ -40,18 +41,22 @@
   margin-left: 0;
   padding: 15px;
 }
-.formulario .files-box {
+.formulario__icone {
+  display: flex;
+  height: 50px;
+}
+.formulario__icone__select-box {
   display: flex;
   height: 50px;
   justify-content: flex-end;
   position: absolute;
   right: 15px;
-  width: 50%;
+  width: 100%;
 }
-.formulario__icone {
-  display: flex;
+.formulario__icone__select-box p {
+  margin-left: 45px;
 }
-.formulario__icone__select-file {
+.formulario__icone__select-box__file {
   color: #fff;
   font-family: sans-serif;
   background: #bbb;
@@ -60,6 +65,10 @@
   cursor: pointer;
   width: -webkit-fill-available;
   height: 50px;
+}
+.formulario__icone .files-dropzone-active .formulario__icone__select-box {
+  border: 2px dashed #122ad08c;
+  box-shadow: 0px 0px 10px 0px #4454c1ba;
 }
 .formulario__cor {
   display: flex;
@@ -131,7 +140,7 @@
   color: #cacaca;
   font-family: sans-serif;
   font-size: 1em;
-  margin-left: 5vw;
+  margin-left: 15px;
   width: -webkit-fill-available;
 }
 .preview__corpo--descricao p.small {
@@ -152,7 +161,7 @@
 }
 
 @media screen and (min-width: 768px) {
-  .formulario__icone__select-file {
+  .formulario__icone__select-box__file {
     width: 45%;
   }
   .formulario__cor__select-color {
@@ -178,9 +187,12 @@
   #root .conteudo-principal .formulario {
     width: 45%;
   }
-  #root .conteudo-principal .formulario .files-box {
-    left: -12px;
-    right: 0;
+  #root .conteudo-principal .formulario .formulario__icone__select-box {
+    left: 75px;
+    width: 45.3%;
+  }
+  #root .conteudo-principal .formulario .formulario__icone__select-box p {
+    margin-left: 5px;
   }
   #root .conteudo-principal .preview {
     border-left: 1px solid #cccccc94;
@@ -203,6 +215,11 @@
   #root .conteudo-principal .preview button {
     width: 50%;
     margin-left: 25%;
+  }
+}
+@media screen and (min-width: 1440px) {
+  .formulario .formulario__icone__select-box p {
+    margin-left: 45px !important;
   }
 }
 html,

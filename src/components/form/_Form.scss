@@ -6,6 +6,7 @@
         margin-bottom: 3vh;
         &::after {
             content: "X";
+            cursor: pointer;
             position: absolute;
             right: 50px;
             font-weight: bolder;
@@ -28,19 +29,27 @@
         padding: 15px;
     }
 
-    .files-box {
-        display: flex;
-        height: 50px;
-        justify-content: flex-end;
-        position: absolute;
-        right: 15px;
-        width: 50%;
-    }
     &__icone {
         display: flex;
-        &__select-file {
-            @include botoes(#bbb, -webkit-fill-available);
+        height: 50px;
+        &__select-box {
+            display: flex;
             height: 50px;
+            justify-content: flex-end;
+            position: absolute;
+            right: 15px;
+            width: 100%;
+            p {
+                margin-left: 45px;
+            }
+            &__file {
+                @include botoes(#bbb, -webkit-fill-available);
+                height: 50px;
+            }
+        }
+        .files-dropzone-active .formulario__icone__select-box{
+            border: 2px dashed #122ad08c;
+            box-shadow: 0px 0px 10px 0px #4454c1ba;
         }
     }
 

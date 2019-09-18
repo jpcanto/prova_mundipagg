@@ -1,7 +1,7 @@
 @media screen and (min-width: 768px) {
     .formulario {
         &__icone {
-            &__select-file {
+            &__select-box__file {
                 width: 45%;
             }
         }
@@ -33,9 +33,12 @@
             margin: 0 30px 30px;
             .formulario {
                 width: 45%;
-                .files-box {
-                    left: -12px;
-                    right: 0;
+                .formulario__icone__select-box {
+                    left: 75px;
+                    width: 45.3%;
+                    p {
+                        margin-left: 5px;
+                    }
                 }
             }
             .preview {
@@ -62,5 +65,15 @@
             }
         }
 
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .formulario {
+        .formulario__icone__select-box {
+            p {
+                margin-left: 45px !important;
+            }
+        }
     }
 }
