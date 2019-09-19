@@ -1,4 +1,7 @@
 @media screen and (min-width: 768px) {
+    .modal {
+        height: 152vh;
+    }
     .formulario {
         &__icone {
             &__select-box__file {
@@ -31,8 +34,14 @@
             flex-direction: row;
             justify-content: space-around;
             margin: 0 30px 30px;
+            .modal {
+                height: 120vh;
+            }
             .formulario {
                 width: 45%;
+                &__fecha {
+                    top: 185px;
+                }
                 .formulario__icone__select-box {
                     left: 75px;
                     width: 45.3%;
@@ -68,8 +77,14 @@
     }
 }
 
-@media screen and (min-width: 1440px) {
+@media screen and (min-width: 1240px) {
+    .modal {
+        height: 125vh;
+    }
     .formulario {
+        &__fecha {
+            top: 105px !important;
+        }
         .formulario__icone__select-box {
             p {
                 margin-left: 45px !important;

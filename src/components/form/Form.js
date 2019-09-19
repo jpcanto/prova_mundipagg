@@ -1,6 +1,7 @@
 import React from 'react'
 import { ChromePicker } from "react-color"
 import Files from 'react-files'
+import Modal from './../modal/Modal';
 
 export default class Form extends React.Component {
 
@@ -11,6 +12,7 @@ export default class Form extends React.Component {
         mudaCor: '#191919',
         color: {},
         files: [],
+        onAppClose: false,
     }
 
     onFilesChange = (files) => {
@@ -69,17 +71,30 @@ export default class Form extends React.Component {
         }
     }
 
+    closeApp = () => {
+        this.setState({
+            onAppClose: !this.state.onAppClose,
+            appName: 'App Name',
+            appCategory: 'App Category',
+            mudaCor: '#191919',
+        })
+        this.refs.appNameInput.value = '';
+    }
+
     render() {
         return (
             <section className="conteudo-principal">
 
+                {this.state.onAppClose ? <Modal state={this.state} /> : null}
+
                 <div className="formulario">
 
                     <h1>Create Your App</h1>
-                    <button className="formulario__fecha">X</button>
+                    <button className="formulario__fecha" onClick={() => this.closeApp()}>X</button>
                     <h2>APP NAME</h2>
                     <input
                         type="text"
+                        ref="appNameInput"
                         onChange={(e) => this.setState({ appName: e.target.value })}
                         placeholder="Enter App Display Name">
                     </input>
@@ -154,6 +169,7 @@ export default class Form extends React.Component {
                     </div>
                     <button onClick={this.salvaAppInfo}>SAVE APP</button>
                 </div>
+
             </section>
         )
     }
