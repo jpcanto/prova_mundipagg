@@ -12,5 +12,10 @@
 ### `npm/yarn run sass`
 - Inicia watch no projeto para todos os arquivos .scss e qualquer alteração gera um novo main.css
 
-### `npm run build`
+### `npm/yarn run test`
+- Inicia testes unitários
+#### `Testes disponíveis`
+- Componente Modal (teste de renderização com snapshot)
+
+### `npm/yarn run build`
 Gera a versão para produção.
