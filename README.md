@@ -1,5 +1,15 @@
 # Dev: João Pedro Lopes canto
 
+## Processo seletivo para mundipagg
+
+## Técnologias utilizadas:
+- Estilização:
+SASS
+- Framework:
+ReactJs
+- testes:
+Jest/Enzyme
+
 ## Scripts:
 
 ### `npm install || yarn add`
