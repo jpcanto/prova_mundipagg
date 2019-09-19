@@ -11,6 +11,21 @@ const Modal = (props) => {
                     :
                     null
             }
+            {
+                props.state.isValidate ?
+                    <div className="modal__succes-box">
+                        <p>Parabéns, suas informações foram salvas com sucesso!</p>
+                        <p>Informações do app:</p>
+                        <div className="modal__succes-box__app-info">
+                            <p>{`Nome: ${props.state.appName}`}</p>
+                            <p>{`Categoria: ${props.state.appCategory}`}</p>
+                            <p>{`Cor: ${props.state.mudaCor}`}</p>
+                            <p>{`Url da imagem: ${props.state.files}`}</p>
+                        </div>
+                    </div>
+                    :
+                    null
+            }
         </div>
     );
 }

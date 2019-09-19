@@ -187,11 +187,27 @@
   top: 0;
   z-index: 2;
 }
-.modal__message-box {
+.modal__message-box, .modal__succes-box {
   background: #4d4d4d;
   padding: 15vh 10vw;
   position: absolute;
   top: 12%;
+}
+.modal__succes-box {
+  color: #2d2d2d;
+  background-image: linear-gradient(to right, #fdfdfd, #f5f5f5, #ededed, #e6e6e6, #dedede);
+}
+.modal__succes-box > p:first-child {
+  font-weight: bold;
+  border-bottom: 1px solid #5d5d5d57;
+}
+.modal__succes-box > p:nth-child(2) {
+  text-align: center;
+}
+.modal__succes-box__app-info {
+  text-align: center;
+  border: 1px dashed;
+  border-radius: 5px;
 }
 
 @media screen and (min-width: 768px) {

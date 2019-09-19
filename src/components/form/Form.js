@@ -56,13 +56,13 @@ export default class Form extends React.Component {
         } else if (this.state.appCategory === 'App Category') {
             alert('É necessário escolher alguma categoria');
         } else {
-            this.setState({ isvalidate: true })
+            this.setState({ isValidate: true })
         }
     }
 
     salvaAppInfo = () => {
         this.validateForms();
-        if (this.state.isvalidate) {
+        if (this.state.isValidate) {
             alert(`Dados enviados com sucesso!!`)
             console.log(`Nome: ${this.state.appName}`)
             console.log(`Imagem url: ${this.state.files}`)
@@ -71,13 +71,26 @@ export default class Form extends React.Component {
         }
     }
 
-    closeApp = () => {
+    setDefaultState = () => {
         this.setState({
-            onAppClose: !this.state.onAppClose,
             appName: 'App Name',
             appCategory: 'App Category',
             mudaCor: '#191919',
+            files: [],
         })
+    }
+
+    closeApp = () => {
+        if (!this.state.isValidate) {
+            this.setState({
+                onAppClose: !this.state.onAppClose,
+            })
+        } else {
+            this.setState({
+                isValidate: false
+            })
+        }
+        this.setDefaultState()
         this.refs.appNameInput.value = '';
     }
 
@@ -86,11 +99,12 @@ export default class Form extends React.Component {
             <section className="conteudo-principal">
 
                 {this.state.onAppClose ? <Modal state={this.state} /> : null}
+                {this.state.isValidate ? <Modal state={this.state} /> : null}
 
                 <div className="formulario">
 
                     <h1>Create Your App</h1>
-                    <button className={this.state.onAppClose ? 'formulario__fecha fixed' : 'formulario__fecha'}
+                    <button className={this.state.onAppClose || this.state.isValidate ? 'formulario__fecha fixed' : 'formulario__fecha'}
                         onClick={() => this.closeApp()}>
                         X
                     </button>
