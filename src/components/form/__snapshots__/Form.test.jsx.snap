@@ -1,0 +1,183 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testando renderização do componente Form Deve renderizar corretamente 1`] = `
+<Form>
+  <section
+    className="conteudo-principal"
+  >
+    <div
+      className="formulario"
+    >
+      <h1>
+        Create Your App
+      </h1>
+      <button
+        className="formulario__fecha"
+        onClick={[Function]}
+      >
+        X
+      </button>
+      <h2>
+        APP NAME
+      </h2>
+      <input
+        onChange={[Function]}
+        placeholder="Enter App Display Name"
+        type="text"
+      />
+      <h2>
+        APP ICON
+      </h2>
+      <div
+        className="formulario__icone"
+      >
+        <t
+          accepts={
+            Array [
+              "image/*",
+            ]
+          }
+          className="files-dropzone"
+          clickable={true}
+          dropActiveClassName="files-dropzone-active"
+          maxFileSize={Infinity}
+          maxFiles={Infinity}
+          minFileSize={0}
+          multiple={false}
+          name="file"
+          onChange={[Function]}
+          onError={[Function]}
+        >
+          <div>
+            <input
+              accept="image/*"
+              multiple={false}
+              name="file"
+              onChange={[Function]}
+              style={
+                Object {
+                  "display": "none",
+                }
+              }
+              type="file"
+            />
+            <div
+              className="files-dropzone"
+              onClick={[Function]}
+              onDragEnter={[Function]}
+              onDragLeave={[Function]}
+              onDragOver={[Function]}
+              onDrop={[Function]}
+            >
+               
+              <div
+                className="formulario__icone__select-box"
+              >
+                <p>
+                  Select a File
+                </p>
+                <button
+                  className="formulario__icone__select-box__file"
+                >
+                  SELECT A FILE
+                </button>
+              </div>
+            </div>
+          </div>
+        </t>
+      </div>
+      <h2>
+        ICON'S BACKGROUND COLOR
+      </h2>
+      <div
+        className="formulario__cor"
+      >
+        <p>
+          Pick a color
+        </p>
+        <button
+          className="formulario__cor__select-color"
+          onClick={[Function]}
+          style={
+            Object {
+              "background": "#191919",
+            }
+          }
+        >
+          #191919
+        </button>
+      </div>
+      <h2>
+        CATEGORY
+      </h2>
+      <div
+        className="formulario__categoria"
+      >
+        <select
+          onChange={[Function]}
+        >
+          <option>
+            Select a Category
+          </option>
+          <option>
+            Técnologia e informação
+          </option>
+          <option>
+            Educação
+          </option>
+          <option>
+            Hospitalar
+          </option>
+          <option>
+            Esportes
+          </option>
+        </select>
+      </div>
+    </div>
+    <div
+      className="preview"
+    >
+      <h2>
+        APP'S CARD PREVIEW
+      </h2>
+      <div
+        className="preview__corpo"
+      >
+        <div
+          className="preview__corpo--caixa"
+          style={
+            Object {
+              "background": "#191919",
+            }
+          }
+        >
+          <img
+            className="files-gallery-item"
+            src="https://cdn2.iconfinder.com/data/icons/status-solid-style/24/close-circle-512.png"
+          />
+        </div>
+        <div
+          className="preview__corpo--descricao"
+        >
+          <h2>
+            App Name
+          </h2>
+          <p>
+            App Category
+          </p>
+          <p
+            className="small"
+          >
+            New App
+          </p>
+        </div>
+      </div>
+      <button
+        onClick={[Function]}
+      >
+        SAVE APP
+      </button>
+    </div>
+  </section>
+</Form>
+`;

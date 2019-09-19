@@ -25,7 +25,8 @@ Jest/Enzyme
 ### `npm/yarn run test`
 - Inicia testes unitários
 #### `Testes disponíveis`
-- Componente Modal (teste de renderização com snapshot)
+- Componente Form (teste apenas de renderização com snapshot)
+- Componente Modal (teste de renderização, renderiza quando a prop for true (baseado em lógica de mock, simula a alteração de estado e so renderiza se for true))
 
 ### `npm/yarn run build`
 Gera a versão para produção.
