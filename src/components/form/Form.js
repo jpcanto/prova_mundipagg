@@ -68,7 +68,7 @@ export default class Form extends React.Component {
         if (this.state.isValidate) {
             console.log('oi')
             console.log(`Nome: ${this.state.appName}`)
-            console.log(`Imagem url: ${this.state.files}`)
+            console.log(`Imagem url: ${this.state.files[0].preview.url.slice(5, this.state.files[0].preview.url.lastIndexOf('.png' || '.jpg' || '.svg'))}`)
             console.log(`Cor hex: ${this.state.mudaCor}`)
             console.log(`Categoria: ${this.state.appCategory}`)
         }
@@ -137,7 +137,7 @@ export default class Form extends React.Component {
 
                     <h2>ICON'S BACKGROUND COLOR</h2>
                     <div className="formulario__cor">
-                        <p style={this.state.mudaCor !== '#191919'? {color: this.state.mudaCor} : null}>Pick a color</p>
+                        <p style={this.state.mudaCor !== '#191919' ? { color: this.state.mudaCor } : null}>Pick a color</p>
                         <button className="formulario__cor__select-color" style={{ background: this.state.mudaCor }} onClick={() => this.mostraColorPicker()}>{this.state.mudaCor}</button>
                         {this.state.visualizaColorPicker && (
                             <div className={"formulario__cor-caixa"}>
