@@ -27,6 +27,7 @@
 .formulario__fecha.fixed {
   background: #fff;
   position: fixed;
+  top: 115px;
   z-index: 3;
 }
 .formulario h2 {
