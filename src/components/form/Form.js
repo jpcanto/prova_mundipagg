@@ -90,7 +90,10 @@ export default class Form extends React.Component {
                 <div className="formulario">
 
                     <h1>Create Your App</h1>
-                    <button className="formulario__fecha" onClick={() => this.closeApp()}>X</button>
+                    <button className={this.state.onAppClose ? 'formulario__fecha fixed' : 'formulario__fecha'}
+                        onClick={() => this.closeApp()}>
+                        X
+                    </button>
                     <h2>APP NAME</h2>
                     <input
                         type="text"

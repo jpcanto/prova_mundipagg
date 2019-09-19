@@ -24,6 +24,11 @@
   top: 40px;
   z-index: 2;
 }
+.formulario__fecha.fixed {
+  background: #fff;
+  position: fixed;
+  z-index: 3;
+}
 .formulario h2 {
   color: #6d6d6d;
   font-family: sans-serif;
@@ -176,7 +181,7 @@
   display: flex;
   left: 0;
   justify-content: center;
-  position: absolute;
+  position: fixed;
   right: 0;
   top: 0;
   z-index: 2;
@@ -189,10 +194,9 @@
 }
 
 @media screen and (min-width: 768px) {
-  .modal {
-    height: 152vh;
+  .formulario__fecha.fixed {
+    top: 155px;
   }
-
   .formulario__icone__select-box__file {
     width: 45%;
   }
@@ -216,13 +220,11 @@
     justify-content: space-around;
     margin: 0 30px 30px;
   }
-  #root .conteudo-principal .modal {
-    height: 120vh;
-  }
   #root .conteudo-principal .formulario {
     width: 45%;
   }
   #root .conteudo-principal .formulario__fecha {
+    right: 95px;
     top: 185px;
   }
   #root .conteudo-principal .formulario .formulario__icone__select-box {
@@ -256,10 +258,6 @@
   }
 }
 @media screen and (min-width: 1240px) {
-  .modal {
-    height: 125vh;
-  }
-
   .formulario__fecha {
     top: 105px !important;
   }
