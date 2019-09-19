@@ -158,7 +158,7 @@ export default class Form extends React.Component {
                                             <img className='files-gallery-item' src={file.preview.url} key={file.id} alt='selected-file' />
                                         )}
                                     </div>
-                                    : null
+                                    : <img className='files-gallery-item' src="https://cdn2.iconfinder.com/data/icons/status-solid-style/24/close-circle-512.png"></img>
                             }
                         </div>
                         <div className="preview__corpo--descricao">
