@@ -13,6 +13,7 @@ export default class Form extends React.Component {
         color: {},
         files: [],
         onAppClose: false,
+        isValidate: false
     }
 
     onFilesChange = (files) => {
@@ -57,13 +58,15 @@ export default class Form extends React.Component {
             alert('É necessário escolher alguma categoria');
         } else {
             this.setState({ isValidate: true })
+            console.log('valida form' + this.state.isValidate)
         }
     }
 
     salvaAppInfo = () => {
         this.validateForms();
+        console.log('salva app info' + this.state.isValidate)
         if (this.state.isValidate) {
-            alert(`Dados enviados com sucesso!!`)
+            console.log('oi')
             console.log(`Nome: ${this.state.appName}`)
             console.log(`Imagem url: ${this.state.files}`)
             console.log(`Cor hex: ${this.state.mudaCor}`)
@@ -98,8 +101,7 @@ export default class Form extends React.Component {
         return (
             <section className="conteudo-principal">
 
-                {this.state.onAppClose ? <Modal state={this.state} /> : null}
-                {this.state.isValidate ? <Modal state={this.state} /> : null}
+                {this.state.onAppClose || this.state.isValidate ? <Modal state={this.state} /> : null}
 
                 <div className="formulario">
 
@@ -135,7 +137,7 @@ export default class Form extends React.Component {
 
                     <h2>ICON'S BACKGROUND COLOR</h2>
                     <div className="formulario__cor">
-                        <p>Pick a color</p>
+                        <p style={this.state.mudaCor !== '#191919'? {color: this.state.mudaCor} : null}>Pick a color</p>
                         <button className="formulario__cor__select-color" style={{ background: this.state.mudaCor }} onClick={() => this.mostraColorPicker()}>{this.state.mudaCor}</button>
                         {this.state.visualizaColorPicker && (
                             <div className={"formulario__cor-caixa"}>
@@ -175,7 +177,7 @@ export default class Form extends React.Component {
                                             <img className='files-gallery-item' src={file.preview.url} key={file.id} alt='selected-file' />
                                         )}
                                     </div>
-                                    : <img className='files-gallery-item' src="https://cdn2.iconfinder.com/data/icons/status-solid-style/24/close-circle-512.png"></img>
+                                    : <img className='files-gallery-item' src="https://cdn2.iconfinder.com/data/icons/status-solid-style/24/close-circle-512.png" alt="img default"></img>
                             }
                         </div>
                         <div className="preview__corpo--descricao">

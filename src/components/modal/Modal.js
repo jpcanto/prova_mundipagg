@@ -20,7 +20,7 @@ const Modal = (props) => {
                             <p>{`Nome: ${props.state.appName}`}</p>
                             <p>{`Categoria: ${props.state.appCategory}`}</p>
                             <p>{`Cor: ${props.state.mudaCor}`}</p>
-                            <p>{`Url da imagem: ${props.state.files}`}</p>
+                            <p>{`Url da imagem: ${props.state.files[0].preview.url.slice(5, props.state.files[0].preview.url.lastIndexOf('.png' || '.jpg' || '.svg'))}`}</p>
                         </div>
                     </div>
                     :
