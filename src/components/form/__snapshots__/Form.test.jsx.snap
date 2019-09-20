@@ -118,7 +118,11 @@ exports[`Testando renderização do componente Form Deve renderizar corretamente
         <select
           onChange={[Function]}
         >
-          <option>
+          <option
+            disabled={true}
+            selected={true}
+            value={true}
+          >
             Select a Category
           </option>
           <option>
