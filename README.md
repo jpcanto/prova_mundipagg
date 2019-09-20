@@ -16,7 +16,7 @@ Jest/Enzyme
 - funcionalidade drag and drop na versão desktop no campo de seleção de imagem.
 - ao selecionar uma imagem, não deve ser possível selecionar outra.
 - ao clicar em salvar validar se os campos foram preenchidos (todos).
-- ao clicar em salvar caso todos os campos estejam preenchidos, dar um log no console com as informações inseridas pelo usuário.
+- ao clicar em salvar caso todos os campos estejam preenchidos, abrir uma lightbox (modal) com as informações inseridas pelo usuário.
 - possuir testes automatizados dos componentes.
 
 ## Scripts:
