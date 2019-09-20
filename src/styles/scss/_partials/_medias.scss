@@ -1,0 +1,89 @@
+@media screen and (min-width: 768px) {
+    .formulario {
+        &__fecha.fixed {
+            top: 155px;
+        }
+        &__icone {
+            &__select-box__file {
+                width: 45%;
+            }
+        }
+        &__cor {
+            &__select-color {
+                width: 25%;
+            }
+        }
+    }
+    .preview {
+        &__corpo {
+            &--caixa {
+                width: 200px
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+
+    #root {
+        background-color: #eff9fb;
+        padding: 10vh 0 !important;
+        .conteudo-principal {
+            background: #fff;
+            border: 1px solid #6d6d6d;
+            flex-direction: row;
+            justify-content: space-around;
+            margin: 0 30px 30px;
+            .formulario {
+                width: 45%;
+                &__fecha {
+                    right: 95px;
+                    top: 185px;
+                }
+                .formulario__icone__select-box {
+                    left: 75px;
+                    width: 45.3%;
+                    p {
+                        margin-left: 5px;
+                    }
+                }
+            }
+            .preview {
+                border-left: 1px solid #cccccc94;
+                margin: 60px 15px;
+                padding: 30px 50px;
+                width: 30%;
+                &__corpo {
+                    flex-direction: column;
+                    &--caixa {
+                        width: -webkit-fill-available;
+                    }
+                    &--descricao {
+                        width: -webkit-fill-available;
+                        h2, p {
+                            margin-left: 0 !important;
+                        }
+                    }
+                }
+                button {
+                    width: 50%;
+                    margin-left: 25%;
+                }
+            }
+        }
+
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .formulario {
+        &__fecha {
+            top: 105px !important;
+        }
+        .formulario__icone__select-box {
+            p {
+                margin-left: 45px !important;
+            }
+        }
+    }
+}

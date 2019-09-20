@@ -1,0 +1,44 @@
+.modal {
+    color: #fff;
+    font-family: sans-serif;
+    font-size: 1.5em;
+    
+    align-items: center;
+    background-color: #000000bd;
+    bottom: 0;
+    display: flex;
+    left: 0;
+    justify-content: center;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 2;
+    &__message-box,
+    &__succes-box {
+        background: #4d4d4d;
+        padding: 15vh 10vw;
+        position: absolute;
+        top: 12%;
+    }
+    &__succes-box {
+        color: #fff;
+
+        background: #4d4d4d;
+        border-radius: 10px;
+        & > p:first-child {
+            font-weight: bold;
+
+            border-bottom: 1px solid #5d5d5d57;
+        }
+        & > p:nth-child(2) {
+            text-align: center;
+        }
+        &__app-info {
+            text-align: center;
+
+            border: 1px dashed;
+            border-radius: 5px;
+            padding: 15px;
+        }
+    }
+}

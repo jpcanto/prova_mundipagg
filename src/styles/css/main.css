@@ -1,20 +1,37 @@
+.conteudo-principal {
+  display: flex;
+  flex-direction: column;
+}
+
 .formulario {
+  height: 100%;
   margin: 15px;
 }
 .formulario h1 {
-  color: #4d4d4d;
+  color: #6d6d6d;
   font-family: sans-serif;
   font-size: 1.5em;
   margin-bottom: 3vh;
 }
-.formulario h1::after {
-  content: "X";
-  position: absolute;
-  right: 20px;
+.formulario__fecha {
+  font-size: 1.2em;
   font-weight: bolder;
+  background: initial;
+  border: 0;
+  cursor: pointer;
+  position: absolute;
+  right: 50px;
+  top: 40px;
+  z-index: 2;
+}
+.formulario__fecha.fixed {
+  background: #fff;
+  position: fixed;
+  top: 115px;
+  z-index: 3;
 }
 .formulario h2 {
-  color: #4d4d4d;
+  color: #6d6d6d;
   font-family: sans-serif;
   font-size: 1.1em;
 }
@@ -25,7 +42,7 @@
   color: #cacaca;
   font-family: sans-serif;
   font-size: 1em;
-  margin-left: 5vw;
+  margin-left: 15px;
   width: -webkit-fill-available;
 }
 .formulario input {
@@ -36,15 +53,32 @@
 }
 .formulario__icone {
   display: flex;
+  height: 50px;
 }
-.formulario__icone__select-file {
+.formulario__icone__select-box {
+  display: flex;
+  height: 50px;
+  justify-content: flex-end;
+  position: absolute;
+  right: 15px;
+  width: 100%;
+}
+.formulario__icone__select-box p {
+  margin-left: 45px;
+}
+.formulario__icone__select-box__file {
   color: #fff;
   font-family: sans-serif;
   background: #bbb;
   border: 0;
   border-radius: 3px;
   cursor: pointer;
-  width: 80%;
+  width: -webkit-fill-available;
+  height: 50px;
+}
+.formulario__icone .files-dropzone-active .formulario__icone__select-box {
+  border: 2px dashed #122ad08c;
+  box-shadow: 0px 0px 10px 0px #4454c1ba;
 }
 .formulario__cor {
   display: flex;
@@ -59,7 +93,6 @@
   width: 45%;
 }
 .formulario__cor-caixa {
-  bottom: 0;
   position: absolute;
 }
 .formulario__cor-caixa--fecha {
@@ -71,12 +104,187 @@
 }
 .formulario select {
   color: #cacaca;
+  background: url(https://cdn1.iconfinder.com/data/icons/material-core/10/arrow-drop-down-512.png) no-repeat right;
+  background-size: 15px;
   border: 0;
+  border-bottom: 1px solid #5d5d5d57;
   height: 50px;
   padding: 15px;
   width: -webkit-fill-available;
+  -webkit-appearance: none;
 }
 
+.preview {
+  height: 100%;
+  margin: 15px;
+}
+.preview h2 {
+  color: #6d6d6d;
+  font-family: sans-serif;
+  font-size: 1.1em;
+}
+.preview__corpo {
+  align-items: center;
+  display: flex;
+  margin-bottom: 20px;
+}
+.preview__corpo--caixa {
+  align-items: center;
+  align-self: baseline;
+  background: #191919;
+  display: flex;
+  height: 200px;
+  justify-content: center;
+  margin-right: 15px;
+  width: 150px;
+}
+.preview__corpo--caixa .files-gallery {
+  display: flex;
+  justify-content: center;
+  height: 50%;
+}
+.preview__corpo--caixa .files-gallery-item {
+  width: 50%;
+}
+.preview__corpo h2 {
+  margin-left: 5vw;
+}
+.preview__corpo--descricao p:not(.small) {
+  color: #cacaca;
+  font-family: sans-serif;
+  font-size: 1em;
+  margin-left: 15px;
+  width: -webkit-fill-available;
+}
+.preview__corpo--descricao p.small {
+  color: #6d6d6d;
+  font-family: sans-serif;
+  font-size: 0.9em;
+  margin-left: 5vw;
+}
+.preview button {
+  color: #fff;
+  font-family: sans-serif;
+  background: #bbb;
+  border: 0;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 100%;
+  height: 50px;
+}
+
+.modal {
+  color: #fff;
+  font-family: sans-serif;
+  font-size: 1.5em;
+  align-items: center;
+  background-color: #000000bd;
+  bottom: 0;
+  display: flex;
+  left: 0;
+  justify-content: center;
+  position: fixed;
+  right: 0;
+  top: 0;
+  z-index: 2;
+}
+.modal__message-box, .modal__succes-box {
+  background: #4d4d4d;
+  padding: 15vh 10vw;
+  position: absolute;
+  top: 12%;
+}
+.modal__succes-box {
+  color: #fff;
+  background: #4d4d4d;
+  border-radius: 10px;
+}
+.modal__succes-box > p:first-child {
+  font-weight: bold;
+  border-bottom: 1px solid #5d5d5d57;
+}
+.modal__succes-box > p:nth-child(2) {
+  text-align: center;
+}
+.modal__succes-box__app-info {
+  text-align: center;
+  border: 1px dashed;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .formulario__fecha.fixed {
+    top: 155px;
+  }
+  .formulario__icone__select-box__file {
+    width: 45%;
+  }
+  .formulario__cor__select-color {
+    width: 25%;
+  }
+
+  .preview__corpo--caixa {
+    width: 200px;
+  }
+}
+@media screen and (min-width: 1024px) {
+  #root {
+    background-color: #eff9fb;
+    padding: 10vh 0 !important;
+  }
+  #root .conteudo-principal {
+    background: #fff;
+    border: 1px solid #6d6d6d;
+    flex-direction: row;
+    justify-content: space-around;
+    margin: 0 30px 30px;
+  }
+  #root .conteudo-principal .formulario {
+    width: 45%;
+  }
+  #root .conteudo-principal .formulario__fecha {
+    right: 95px;
+    top: 185px;
+  }
+  #root .conteudo-principal .formulario .formulario__icone__select-box {
+    left: 75px;
+    width: 45.3%;
+  }
+  #root .conteudo-principal .formulario .formulario__icone__select-box p {
+    margin-left: 5px;
+  }
+  #root .conteudo-principal .preview {
+    border-left: 1px solid #cccccc94;
+    margin: 60px 15px;
+    padding: 30px 50px;
+    width: 30%;
+  }
+  #root .conteudo-principal .preview__corpo {
+    flex-direction: column;
+  }
+  #root .conteudo-principal .preview__corpo--caixa {
+    width: -webkit-fill-available;
+  }
+  #root .conteudo-principal .preview__corpo--descricao {
+    width: -webkit-fill-available;
+  }
+  #root .conteudo-principal .preview__corpo--descricao h2, #root .conteudo-principal .preview__corpo--descricao p {
+    margin-left: 0 !important;
+  }
+  #root .conteudo-principal .preview button {
+    width: 50%;
+    margin-left: 25%;
+  }
+}
+@media screen and (min-width: 1240px) {
+  .formulario__fecha {
+    top: 105px !important;
+  }
+  .formulario .formulario__icone__select-box p {
+    margin-left: 45px !important;
+  }
+}
 html,
 body,
 #root {

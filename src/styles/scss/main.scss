@@ -1,7 +1,9 @@
 @import './_partials/variables';
 @import './_partials/mixins';
+@import './_partials/conteudo-principal';
 @import '../../components/form/Form';
-@import '../../components/preview/Preview';
+@import '../../components/modal/Modal';
+@import './_partials/medias';
 
 html, 
 body, 

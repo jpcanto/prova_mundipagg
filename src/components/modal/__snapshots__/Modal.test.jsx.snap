@@ -1,0 +1,23 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testando renderização do componente Modal Deve renderizar corretamente 1`] = `
+<Modal
+  state={
+    Object {
+      "onAppClose": true,
+    }
+  }
+>
+  <div
+    className="modal"
+  >
+    <div
+      className="modal__message-box"
+    >
+      <p>
+        Você está finalizando o app, todas as alterações serão perdidas!
+      </p>
+    </div>
+  </div>
+</Modal>
+`;
